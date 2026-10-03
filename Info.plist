@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>CFBundleName</key><string>Lantern</string>
+  <key>CFBundleDisplayName</key><string>Lantern</string>
+  <key>CFBundleIdentifier</key><string>com.mayukhd.lantern</string>
+  <key>CFBundleExecutable</key><string>Lantern</string>
+  <key>CFBundleIconFile</key><string>Lantern</string>
+  <key>CFBundlePackageType</key><string>APPL</string>
+  <key>CFBundleShortVersionString</key><string>1.0</string>
+  <key>CFBundleVersion</key><string>1</string>
+  <key>LSMinimumSystemVersion</key><string>14.0</string>
+  <key>LSUIElement</key><true/>
+  <key>NSBluetoothAlwaysUsageDescription</key><string>Lantern connects to your Bluetooth light to set its colour.</string>
+</dict></plist>
