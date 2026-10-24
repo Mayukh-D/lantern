@@ -2,13 +2,32 @@
 
 # Lantern
 
-**A Mac menu bar app for Bluetooth LED bars: match the light to your screen, pick any colour, set a white, or run an effect.**
+**Make your cheap Amazon LED lights glow with whatever's on your Mac screen.**
+
+Bought a Bluetooth LED strip or light bar and control it with a phone app? Lantern puts it in your Mac's menu bar instead: the light follows your screen like a Philips Hue setup, and you can pick any colour, a warm or cool white, or a rainbow effect. No hub, no account, no subscription.
 
 ![Same bar, six screens: the LED bar glows to match what's on the laptop](docs/images/hero.jpg)
 
 <sub>The toad (bottom right) shows how it decides: the light matched the green background, not the toad, because that covers the most of the screen.</sub>
 
 **[Website](https://mayukh-d.github.io/lantern/)** · **[Download](https://github.com/Mayukh-D/lantern/releases/latest)** · macOS 14+
+
+## Will it work with my lights?
+
+Probably, if you control them with one of these phone apps:
+
+- Lotus Lantern
+- Lotus Lamp X
+- duoCo Strip
+- Magic Lantern
+
+These lights are sold under dozens of brand names on Amazon, AliExpress and Temu, but inside they're the same, so the app is the best clue.
+
+**Quick check:** turn the light on, then open Bluetooth settings on your Mac. If you see a device called **ELK-BLEDOM** or **MELK-** followed by letters, Lantern will work with it.
+
+Close the phone app first; the light only listens to one controller at a time.
+
+Tested on a MELK-OA10 light bar. Got a different one working (or not)? [Tell me which](https://github.com/Mayukh-D/lantern/issues/new) and I'll add it to the list.
 
 ## Why I built it
 
@@ -54,12 +73,6 @@ It is built with SwiftUI and follows the macOS look: the menu bar panel uses the
     <td align="center"><sub>Colour</sub></td><td align="center"><sub>Effects</sub></td>
   </tr>
 </table>
-
-## Which lights
-
-Lantern finds Bluetooth lights advertising as **`MELK-…`** or **`ELK-…`**: the cheap LED bars and strips sold with the *Magic Lantern*, *Lotus Lantern* and *duoCo* style apps. It is tested on a **MELK-OA10** LED bar. Other lights in the family use the same commands, but built-in effect codes vary between models.
-
-Only one controller can be connected at a time, so close the phone app before opening Lantern.
 
 ## Privacy
 

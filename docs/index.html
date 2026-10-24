@@ -6,8 +6,8 @@
 <meta name="color-scheme" content="dark">
 <link rel="icon" type="image/png" href="images/icon-64.png">
 <link rel="apple-touch-icon" href="images/icon.png">
-<title>Lantern · LED bar control for the Mac</title>
-<meta name="description" content="A Mac menu bar app for Bluetooth LED bars: match the light to your screen, pick any colour, set a white, or run an effect.">
+<title>Lantern: screen sync for cheap LED lights on Mac</title>
+<meta name="description" content="Make the cheap Bluetooth LED lights from Amazon glow with whatever's on your Mac screen. Works with lights that use the Lotus Lantern, Lotus Lamp X, duoCo Strip or Magic Lantern apps. Free.">
 <style>
   :root { --bg: #0b0c10; --card: #14161c; --line: #262a33; --text: #e8ebf1; --muted: #9aa3b2; --hue: 200; }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -62,7 +62,7 @@
     <div class="bar" id="bar" aria-hidden="true"></div>
     <img src="images/icon.png" width="112" height="112" alt="" style="display:block;margin:40px auto -28px">
     <h1>Lantern</h1>
-    <p>A Mac menu bar app for Bluetooth LED bars. Match the light to your screen, pick any colour, set a white, or run an effect: straight over Bluetooth, no hub, no account.</p>
+    <p>Make your cheap Amazon LED lights glow with whatever's on your Mac screen. Bought a Bluetooth LED strip or light bar that you control with a phone app? Lantern puts it in your Mac's menu bar instead: the light follows your screen like a Philips Hue setup, and you can pick any colour, a warm or cool white, or a rainbow effect. No hub, no account, no subscription.</p>
     <div class="ctas">
       <a class="btn primary" href="https://github.com/Mayukh-D/lantern/releases/latest">Download for macOS</a>
       <a class="btn" href="https://github.com/Mayukh-D/lantern">Source on GitHub</a>
@@ -131,8 +131,15 @@
   </section>
 
   <section class="wrap">
-    <h2>Which lights</h2>
-    <p style="color:var(--muted)">Bluetooth lights that advertise as <code>MELK-…</code> or <code>ELK-…</code>: the inexpensive LED bars and strips sold with the Magic Lantern and Lotus Lantern style apps. Tested on a MELK-OA10 bar. They all take the same 9-byte commands on service <code>FFF0</code>, characteristic <code>FFF3</code>:</p>
+    <h2>Will it work with my lights?</h2>
+    <p>Probably, if you control them with one of these phone apps: <b>Lotus Lantern</b>, <b>Lotus Lamp X</b>, <b>duoCo Strip</b> or <b>Magic Lantern</b>. These lights are sold under dozens of brand names on Amazon, AliExpress and Temu, but inside they're the same, so the app is the best clue.</p>
+    <p><b>Quick check:</b> turn the light on, then open Bluetooth settings on your Mac. If you see a device called <b>ELK-BLEDOM</b> or <b>MELK-</b> followed by letters, Lantern will work with it. Close the phone app first; the light only listens to one controller at a time.</p>
+    <p style="color:var(--muted)">Tested on a MELK-OA10 light bar. Got a different one working (or not)? <a href="https://github.com/Mayukh-D/lantern/issues/new">Tell me which</a> and I'll add it to the list.</p>
+  </section>
+
+  <section class="wrap">
+    <h2>For the curious: the commands</h2>
+    <p style="color:var(--muted)">Lights that show up as <code>MELK-…</code> or <code>ELK-…</code> all take the same 9-byte commands on service <code>FFF0</code>, characteristic <code>FFF3</code>:</p>
     <table style="margin-top:14px">
       <tr><th>Command</th><th>Bytes</th></tr>
       <tr><td>Colour</td><td><code>7E 07 05 03 RR GG BB 10 EF</code></td></tr>
